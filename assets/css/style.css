@@ -35,6 +35,10 @@ header .name {
     float: left;
 }
 
+.header-content {
+    width: 960px;
+    margin: 0 auto;    
+}
 
 
 /*navigation in the header*/
@@ -87,7 +91,7 @@ nav li a:hover {
 
 aside {
     margin: 3em 0 0 1em;
-    float: right;
+    float: left;
     /*float has to change to left after 930px wide screen*/
     width: 28%;
     background-color: white;
@@ -95,7 +99,11 @@ aside {
 }
 
 aside a {
+    width: 32%;
+    display: inline-block;
+    margin-top: 15px;
     text-decoration: none;
+    text-align: center;
 }
 
 aside img {
@@ -106,6 +114,9 @@ aside img {
 
 aside h3 {
     font-size: 1.5em;
+    margin-bottom: 15px;
+    text-align: center;
+    padding-top: .5em;
 }
 
 
@@ -149,6 +160,8 @@ footer p {
 
 main {
     padding: 0 2em;
+    width: 960px;
+    margin: 0 auto;
 }
 
 .clear:before,
