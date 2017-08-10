@@ -35,6 +35,10 @@ header .name {
     float: left;
 }
 
+.header-content {
+    width: 960px;
+    margin: 0 auto;    
+}
 
 
 /*navigation in the header*/
@@ -87,7 +91,7 @@ nav li a:hover {
 
 aside {
     margin: 3em 0 0 1em;
-    float: right;
+    float: left;
     /*float has to change to left after 930px wide screen*/
     width: 28%;
     background-color: white;
@@ -95,7 +99,15 @@ aside {
 }
 
 aside a {
+    /*
+        It's nice to have the images evenly spread out across your connect with me container 
+        as opposed to favoring the left side and leaving extra white space on the right.
+    */
+    width: 32%;
+    display: inline-block;
+    margin-top: 15px;
     text-decoration: none;
+    text-align: center;
 }
 
 aside img {
@@ -106,6 +118,9 @@ aside img {
 
 aside h3 {
     font-size: 1.5em;
+    margin-bottom: 15px;
+    text-align: center;
+    padding-top: .5em;
 }
 
 
@@ -148,7 +163,13 @@ footer p {
 /*styles for the main section of the pages*/
 
 main {
+    /*
+        You rarely ever want your main content to span the full width of the page. 
+        So it's best to define a smaller width and then center that content.
+    */
     padding: 0 2em;
+    width: 960px;
+    margin: 0 auto;
 }
 
 .clear:before,
@@ -188,6 +209,12 @@ but then that would force me to make
 so many different classes/ids 
 instead of .class <element>
 what's the best way to handle this?*/
+
+/*
+    One suggestion I would make is to come up with more generic class names
+    so that they can apply to a wider range of elements and then use id's
+    for any styles specific to a single element.
+*/
 
 .aboutme,
 .portfolio,
@@ -276,6 +303,11 @@ what's the best way to handle this?*/
 
 /*how do I do this without using pseudo element??? 
 is that even possible?*/
+
+/*
+    Pretty sure the best and most concise way to style the placeholder is through the pseudo element selector
+    Though I'm sure you could get clever with some javascript, but I think that would constitute "over-engineering"
+*/
 
 .contact input::placeholder {
     padding: 5px;
